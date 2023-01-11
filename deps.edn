@@ -35,14 +35,7 @@
   :clojure-lsp {:replace-deps {com.github.clojure-lsp/clojure-lsp-standalone {:mvn/version "2022.09.01-15.27.31"}}
                 :main-opts ["-m" "clojure-lsp.main"]}
 
-  #_#_:migratus {:main-opts ["-m" "parenthesin.migrations"]}
-
-  #_#_:uberjar {:deps {io.github.seancorfield/build-clj
-                   {:git/tag "v0.8.3" :git/sha "7ac1f8d"
-                    :deps/root "slim"}}
-            :exec-fn org.corfield.build/uber
-            :exec-args {:main microservice-boilerplate.server
-                        :uber-file "target/service.jar"}}
+  :migratus {:main-opts ["-m" "parenthesin.migrations"]}
 
   :nrepl {:extra-deps {cider/cider-nrepl {:mvn/version "0.28.6"}}
           :main-opts ["-m" "nrepl.cmdline" "--middleware" "[cider.nrepl/cider-middleware]"]}}}
