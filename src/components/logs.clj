@@ -1,4 +1,4 @@
-(ns components.logs 
+(ns components.logs
   (:require [taoensso.timbre :as timbre]
             [taoensso.timbre.appenders.core :as core-appenders]))
 
@@ -11,5 +11,3 @@
 
 (defn log [level & args]
   (timbre/log level args))
-
-
