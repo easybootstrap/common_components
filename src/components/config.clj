@@ -1,4 +1,4 @@
-(ns components.config)
+(ns components.config
   (:require [aero.core :as aero]
             [clojure.java.io :as io]
             [com.stuartsierra.component :as component]))
@@ -24,3 +24,4 @@
    (new-config {}))
   ([input-map]
    (map->Config {:config (read-config input-map)})))
+
